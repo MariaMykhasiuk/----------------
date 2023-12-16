@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Замовлення інформаційних промо акцій</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="actions.css">
+<body>
+
+    <!-- Меню для переходу на інші сторінки -->
+    <div id="main-menu">
+        <a href="index.html">Головна сторінка</a>
+        <!-- Кнопка для подачі заявки на готову промо акцію -->
+    <!-- Кнопка для подачі заявки на готову промо акцію -->
+    <button type="button" class="btn float-right apply-btn" data-toggle="modal" data-target="#applyModal"> Подати заявку на промо акцію </button>
+
+    </div>
+
+    <div id="filters">
+        <label for="budget">Бюджет за 1 день проведення:</label>
+        <select id="budget" onchange="updateFilter()">
+            <option value="all">Усі</option>
+            <option value="low_budget">До 14000 грн</option>
+            <option value="medium_budget">14000-18000 грн</option>
+            <option value="high_budget">Більше 18000 грн</option>
+        </select>
+
+        <label for="content">Контент:</label>
+        <select id="content" onchange="updateFilter()">
+            <option value="all">Усі</option>
+            <option value="mobile_apps">Мобільні додатки та ігри</option>
+            <option value="photo_contests">Фотоконкурси та виклики</option>
+            <option value="hackathons">Хакатони та вебінари</option>
+            <option value="virtual_reality">Використання Віртуальна реальність</option>
+        </select>
+
+        <label for="duration">Тривалість:</label>
+        <select id="duration" onchange="updateFilter()">
+            <option value="all">Усі</option>
+            <option value="7_days">7 днів і менше</option>
+            <option value="more_than_7_days">Більше 7 днів</option>
+        </select>
+    </div>
+
+    <div id="promo-list" class="filter-all">
+        <!-- Промо акції тут -->
+        <div class="promo-item low_budget mobile_apps seven_days">
+            <img src="images/11.png" alt="Promo Image 1" class="promo-image">
+            <div class="promo-details">
+                <h2>1. Мобільна гра зі знижкою</h2>
+                <p>Бюджет за 1 день: 11000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item medium_budget photo_contests more_than_7_days">
+            <img src="images/12.png" alt="Promo Image 2" class="promo-image">
+            <div class="promo-details">
+                <h2>2. Фотоконкурс "Зимовий пейзаж"</h2>
+                <p>Бюджет за 1 день: 16000 грн, тривалість більше 7 днів.</p>
+            </div>
+        </div>
+        
+
+        <div class="promo-item high_budget hackathons seven_days">
+            <img src="images/13.png" alt="Promo Image 3" class="promo-image">
+            <div class="promo-details">
+                <h2>3. Великий хакатон для розробників</h2>
+                <p>Бюджет за 1 день: 20000 грн, тривалість більше 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item medium_budget virtual_reality seven_days">
+            <img src="images/14.png" alt="Promo Image 4" class="promo-image">
+            <div class="promo-details">
+                <h2>4. Віртуальна реальність: Подорож у далеке майбутнє</h2>
+                <p>Бюджет за 1 день: 16000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+
+        <div class="promo-item low_budget mobile_apps more_than_7_days">
+            <img src="images/15.png" alt="Promo Image 5" class="promo-image">
+            <div class="promo-details">
+                <h2>5. Грати в мобільній грі з подвійними бонусами</h2>
+                <p>Бюджет за 1 день: 12000 грн, тривалість більше 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item high_budget photo_contests seven_days">
+            <img src="images/16.png" alt="Promo Image 6" class="promo-image">
+            <div class="promo-details">
+                <h2>6. Фотоконкурс "Літаючі об'єкти"</h2>
+                <p>Бюджет за 1 день: 19000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+
+        <div class="promo-item medium_budget hackathons seven_days">
+            <img src="images/17.png" alt="Promo Image 7" class="promo-image">
+            <div class="promo-details">
+                <h2>7. Хакатон для стартапів</h2>
+                <p>Бюджет за 1 день: 15000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item high_budget virtual_reality more_than_7_days">
+            <img src="images/18.png" alt="Promo Image 8" class="promo-image">
+            <div class="promo-details">
+                <h2>8. Віртуальна реальність: Відкриття нових галактик</h2>
+                <p>Бюджет за 1 день: 20000 грн, тривалість більше 7 днів.</p>
+            </div>
+        </div>
+
+        <div class="promo-item medium_budget hackathons seven_days">
+            <img src="images/19.png" alt="Promo Image 9" class="promo-image">
+            <div class="promo-details">
+                <h2>9. Онлайн вебінар "Майстерність UX/UI дизайну"</h2>
+                <p>Бюджет за 1 день: 17000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item low_budget photo_contests more_than_7_days">
+            <img src="images/20.png" alt="Promo Image 10" class="promo-image">
+            <div class="promo-details">
+                <h2>10. Фотоконкурс "Гармонія кольорів"</h2>
+                <p>Бюджет за 1 день: 13000 грн, тривалість більше 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item high_budget virtual_reality seven_days">
+            <img src="images/21.png" alt="Promo Image 11" class="promo-image">
+            <div class="promo-details">
+                <h2>11. Віртуальний тур "Таємниці старовинного міста"</h2>
+                <p>Бюджет за 1 день: 19000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+        
+        <div class="promo-item low_budget mobile_apps seven_days">
+            <img src="images/22.png" alt="Promo Image 12" class="promo-image">
+            <div class="promo-details">
+                <h2>12. Ексклюзивні бонуси в мобільному додатку</h2>
+                <p>Бюджет за 1 день: 13000 грн, тривалість 7 днів.</p>
+            </div>
+        </div>
+
+    <!-- Модальне вікно для подачі заявки -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">Подати заявку на промо акцію</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Форма для подачі заявки -->
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Ім'я та прізвище</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Електронна пошта</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Номер банківської карти</label>
+                            <input type="text" class="form-control" id="cardNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="promoCode">Номер промо акції</label>
+                            <input type="text" class="form-control" id="promoCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="discount">Додаткові побажання</label>
+                            <input type="text" class="form-control" id="discount" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Подати заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Підключення скриптів Bootstrap та jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function updateFilter() {
+      var budgetFilter = document.getElementById('budget').value;
+      var contentFilter = document.getElementById('content').value;
+      var durationFilter = document.getElementById('duration').value;
+  
+      // Отримуємо елемент promo-list
+      var promoList = document.getElementById('promo-list');
+  
+      // Видаляємо існуючі класи фільтра
+      promoList.classList.remove('filter-low_budget', 'filter-medium_budget', 'filter-high_budget');
+      promoList.classList.remove('filter-mobile_apps', 'filter-photo_contests', 'filter-hackathons', 'filter-virtual_reality');
+      promoList.classList.remove('filter-seven_days', 'filter-more_than_7_days');
+  
+      // Додаємо нові класи фільтра
+      promoList.classList.add('filter-' + budgetFilter);
+      promoList.classList.add('filter-' + contentFilter);
+      promoList.classList.add('filter-' + durationFilter);
+    }
+  </script>
+  
+
+</body>
+</html>

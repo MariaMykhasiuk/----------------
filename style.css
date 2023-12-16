@@ -1,0 +1,473 @@
+/* Загальні стилі для body */
+body {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 20px;
+  background: whitesmoke;
+}
+
+/* Стилі для заголовків різних рівнів та їх розміри */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Jost";
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  font-size: 20px; /* Загальний розмір для всіх заголовків */
+}
+
+h1, .h1 {
+  font-size: 70px; /* Збільшений розмір для h1 */
+}
+
+h3, .h3 {
+  font-size: 24px; /* Збільшений розмір для h3 */
+}
+
+h4, .h4 {
+  font-size: 22px; /* Збільшений розмір для h4 */
+}
+
+h5, .h5 {
+  margin-bottom: 0px; /* Зменшення відступу для h5 */
+}
+
+/* Стилі для навігаційного меню та заголовків */
+.navigation.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Білий фон для контейнера з заголовками */
+}
+
+.offcanvas-body {
+  text-align: center;
+  background-color: white; /* Білий фон для контейнера з заголовками */
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  background-color: white; /* Білий фон для логотипу і заголовків */
+  margin-left: -25px;
+}
+
+/* Стилі для навігаційного списку та пунктів */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Додатковий відступ від країв */
+  border-radius: 5px; /* Закруглення країв (опціонально) */
+  background-color: white; /* Білий фон для контейнера з заголовками */
+}
+
+.nav-list h5 {
+  font-size: 25px; 
+  margin-left: -45px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Кожен пункт навігації як блок для встановлення margin */
+  margin-bottom: 10px; /* Відступ між заголовками */
+  margin-top: 30px; /* Відступ зверху для заголовків */
+}
+
+/* Загальні стилі тексту */
+p {
+  font-family: "Roboto";
+  color: var(--light-text-color);
+  font-size: 19px;
+  line-height: 30px;
+}
+
+/* Стилі для посилань */
+a {
+  color: var(--body-text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Стилі для кнопок */
+.btn.btn-primary {
+  border-radius: 60px;
+  --bs-btn-color: var(--accent-color);
+  --bs-btn-bg: var(--body-text-color);
+  --bs-btn-border-color: var(--body-text-color);
+  --bs-btn-hover-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+}
+
+.btn.btn-primary.first-button {
+  font-size: 24px;
+  padding: 20px 60px;
+  transition: all 0.3s ease-in;
+  border-radius: 20px;
+  background: linear-gradient(225deg, rgba(144, 110, 240, 0.75) 18.03%, rgba(210, 88, 221, 0.44) 37.52%, rgba(178, 57, 221, 0.35) 52.93%, rgba(130, 111, 241, 0.65) 68.81%);
+  box-shadow: 0px 10px 50px 0px rgba(24, 28, 31, 0.20);
+}
+
+.btn.btn-outline-primary {
+  border-radius: 35px;
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-border-color: var(--secondary-color);
+  --bs-btn-hover-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+}
+
+/* Стилі для активних елементів і чекбоксів */
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  color: var(--link-color);
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+/* Стилі для другої кнопки */
+.btn.btn-outline-primary.second-button {
+  font-size: 24px;
+  padding: 20px 50px;
+  transition: all 0.3s ease-in;
+  border-radius: 20px;
+  background: radial-gradient(223.17% 185.47% at 108.36% 1.13%, #D087EA 23%, #FF70C0 50%, #FFB257 27%);
+  box-shadow: 0px 10px 50px 0px rgba(24, 28, 31, 0.20);
+}
+
+/* Медіа-запит для маленьких екранів */
+@media only screen and (max-width: 768px) {
+  h1, .h1 {
+    font-size: 50px;
+  }
+}
+
+/* Стилі для навігаційного меню */
+section#navigation-bar {
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  font-size: 25px;
+}
+
+.nav-link {
+  color: var(--body-text-color);
+}
+
+/* Стилі для активних та наведених посилань у навігації */
+a.nav-link.active,
+a.nav-link:focus,
+a.nav-link:hover {
+  color: var(--dark-color);
+}
+
+/* Підкреслення для посилань у навігації */
+a.nav-link::after {
+  content: "";
+  text-align: center;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s;
+}
+
+/* Зміни у ширині підкреслення для активних та наведених посилань */
+a.nav-link.active::after,
+a.nav-link:focus::after,
+a.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Стилі для активного пункту у випадаючому меню */
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--body-text-color);
+  text-decoration: none;
+  background-color: var(--grey-color);
+}
+/* Modal стилі */
+.modal-header {
+  border-bottom: none;
+}
+
+/* Стилі для елементів форми .form-control */
+.form-control:focus {
+  border-color: var(--light-text-color);
+  box-shadow: none;
+  color: var(--body-text-color);
+}
+
+/* Стилі для тла модального вікна .modal-backdrop */
+.modal-backdrop {
+  --bs-backdrop-zindex: 999;
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-backdrop-bg);
+}
+
+/* Медіа-запит для екранів менше 768px */
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: grid;
+  }
+}
+
+/* Медіа-запит для екранів між 990px та 1460px */
+@media only screen and (max-width: 1460px) and (min-width: 990px) {
+  a.login {
+    display: none;
+  }
+
+  button.signup {
+    display: none;
+  }
+}
+
+/* Стилі для контейнера .hero */
+.hero.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Стилі для посилань з іконками .icon-link */
+a.icon-link {
+  color: var(--body-text-color);
+  text-decoration: none;
+  display: inline-table;
+}
+
+a.icon-link:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  transition: width 0.2s ease-out;
+}
+
+a.icon-link:hover:after {
+  width: 20%;
+}
+
+/* Стилі для параграфів .feature-paragraph */
+.feature-paragraph {
+  font-size: 26px;
+  line-height: 60px;
+}
+
+/* Стилі для постів у секції .feature-post */
+.feature-post {
+  background: var(--grey-color);
+  border: 1px solid #e1e1e1;
+}
+
+/* Медіа-запит для екранів менше 768px для .feature-paragraph */
+@media only screen and (max-width: 768px) {
+  .feature-paragraph {
+    font-size: 19px;
+    line-height: 36px;
+  }
+}
+
+/* Стилі для секції послуг .service-post */
+.service-post {
+  background: rgb(255, 255, 255);
+}
+
+.service-post:hover {
+  background: var(--accent-color);
+}
+
+/* Стилі для секції статей .artical-post */
+.artical-post {
+  background: var(--grey-color);
+}
+
+.artical-post:hover {
+  background: var(--accent-color);
+}
+
+/* Стилі для секції клієнтів .client-section */
+.client-section {
+  background: var(--grey-color);
+  border: 1px solid #e1e1e1;
+}
+
+/* Стилі для іконки цитати клієнта .client-quote-icon */
+iconify-icon.client-quote-icon {
+  color: var(--secondary-color);
+  font-size: 31px;
+}
+
+/* Стилі для активної кульки у swiper-секції */
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-color, var(--secondary-color));
+}
+
+/* Стилі для кульки у swiper-секції */
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 10px));
+  height: var(--swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 10px));
+}
+
+/* Стилі для секції "Дії" .action-column1 і .action-column2 */
+.action-column1 {
+  background: var(--grey-color);
+}
+
+.action-column2 {
+  background: var(--secondary-color);
+}
+
+/* Стилі для заголовка і параграфу у секції "Дії" */
+h1.action-heading {
+  color: var(--accent-color);
+}
+
+p.action-paragraph {
+  color: var(--accent-color);
+  font-size: 30px;
+}
+
+/* Стилі для кнопки дії .action-button */
+button.btn.btn-primary.first-button.action-button {
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--accent-color);
+}
+
+/* Стилі для секції "Футер" .footer */
+section#footer {
+  background: url(..images/footer);
+}
+
+/* Стилі для активного посилання у футері */
+a.nav-link.footer-1-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Зміни у ширині підкреслення для посилань у футері */
+a.nav-link.footer-1-link:focus::after,
+a.nav-link.footer-1-link:hover::after {
+  width: 0;
+  transition: width 0.3s;
+}
+
+/* Стилі для галереї */
+.chocolat-wrapper {
+  z-index: 1000;
+}
+
+/* Стилі для елементів акордеона .accordion-button */
+.accordion-button {
+  font-size: 1.3rem;
+}
+
+/* Стилі для фокусу елемента акордеона .accordion-button */
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Стилі для незакритого елемента акордеона .accordion-button */
+.accordion-button:not(.collapsed) {
+  background-color: var(--grey-color);
+}
+
+/* Стилі для тексту елемента акордеона .accordion-body */
+.accordion-body {
+  color: var(--body-text-color);
+}
+
+/* Стилі для активного посилання у вкладках .nav-tabs */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  color: var(--body-text-color);
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid var(--body-text-color);
+}
+
+/* Стилі для обрамлення приміток .border-primary */
+.border-primary {
+  border-color: var(--body-text-color) !important;
+}
+
+/* Стилі для фону приміток .bg-primary */
+.bg-primary {
+  background-color: var(--body-text-color) !important;
+}
+
+/* Стилі для секції "Відгуки" .reviews-components */
+.reviews-components {
+  border: 2px solid #FAFAFA;
+  box-shadow: 0px 12px 90px rgba(12, 12, 12, 0.06);
+  border-radius: 9px;
+}
+
+/* Стилі для іконки цитати .quote */
+iconify-icon.quote {
+  font-size: 60px;
+  color: var(--body-text-color);
+}
+
+/* Стилі для рейтингу .rate */
+.rate {
+  color: var(--body-text-color);
+}
+
+/* Стилі для кольорового відзначення ціни .price-tick */
+span.price-tick {
+  color: var(--secondary-color);
+}
+
+/* Стилі для кнопок фільтрації галереї .gallery-btn */
+button.filter-button.gallery-btn {
+  letter-spacing: 0.075rem;
+  border: 1px solid var(--bs-border-color);
+  background: transparent;
+  color: var(--bs-black);
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+/* Стилі для активної кнопки фільтрації галереї .gallery-btn.active */
+button.filter-button.gallery-btn.active {
+  color: var(--bs-light);
+  background: var(--body-text-color);
+}
+
+/* Стилі для наведення на кнопку фільтрації галереї .gallery-btn:hover */
+button.filter-button.gallery-btn:hover {
+  color: var(--bs-light);
+  background: var(--body-text-color);
+}

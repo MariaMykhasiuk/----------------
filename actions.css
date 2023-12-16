@@ -1,0 +1,135 @@
+/* Стилі для основного контенту сторінки */
+body {
+    font-family: "Roboto"; /* Встановлення шрифту для тексту на сторінці */
+    font-weight: 300; /* Товщина шрифту */
+    font-size: 24px; /* Розмір шрифту */
+    background:  whitesmoke; /* Колір фону */
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+
+/* Стилі для головного меню */
+#main-menu {
+    text-align: center; /* Вирівнювання тексту по центру */
+    background-color: white;  /* Колір фону головного меню */
+    margin-top: 20px; /* Відступ зверху для заголовків */
+    margin-bottom: 20px; /* Відступ знизу для заголовків */
+    font-weight: 400; /* Товщина шрифту */
+}
+
+#main-menu a {
+    margin: 0 10px; /* Зовнішній відступ між пунктами меню */
+    text-decoration: none; /* Видалення підкреслення з посилань */
+    color: #333; /* Колір тексту */
+    font-family: "Roboto"; /* Шрифт */
+    font-weight: 400; /* Товщина шрифту */
+    font-size: 25px; /* Розмір шрифту */
+    line-height: 70px; /* Висота рядка */
+    background: linear-gradient(225deg, rgba(144, 110, 240, 0.75) 18.03%, rgba(210, 88, 221, 0.44) 37.52%, rgba(178, 57, 221, 0.35) 52.93%, rgba(130, 111, 241, 0.65) 68.81%); /* Градієнт фону */
+    border: none; /* Видалення границі */
+
+    padding: 10px 20px; /* Внутрішній відступ тексту */
+    font-size: 25px; /* Розмір шрифту */
+    border-radius: 10px; /* Радіус закруглення кутів */
+    cursor: pointer; /* Змінює вигляд курсору при наведенні */
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+
+.apply-btn {
+    background: linear-gradient(225deg, rgba(144, 110, 240, 0.75) 18.03%, rgba(210, 88, 221, 0.44) 37.52%, rgba(178, 57, 221, 0.35) 52.93%, rgba(130, 111, 241, 0.65) 68.81%); /* Градієнт фону */
+    border: none; /* Видалення границі */
+    color: #000000; /* Колір тексту */
+    padding: 10px 20px; /* Внутрішній відступ тексту */
+    font-size: 25px; /* Розмір шрифту */
+    border-radius: 10px; /* Радіус закруглення кутів */
+    cursor: pointer; /* Змінює вигляд курсору при наведенні */
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+
+/* Стилі для фільтрів промо акцій */
+#filters {
+    margin-bottom: 20px; /* Відступ знизу від фільтрів */
+}
+
+/* Стилі для блоків з промо акціями */
+.promo-item {
+    margin-bottom: 20px; /* Відступ знизу від промо акцій */
+    border: 1px solid #ddd; /* Границя блоку з промо акцією */
+    display: inline-block; /* Вирівнювання блоків в один рядок */
+    width: 30%; /* Ширина блоку промо акції */
+    padding: 10px; /* Внутрішній відступ блоку */
+    box-sizing: border-box; /* Розрахунок ширини блоку включаючи границю та внутрішній відступ */
+    transition: opacity 0.5s ease-in-out; /* Анімація зміни прозорості */
+}
+
+/* Стилі для заголовка промо акції */
+.promo-item h2 {
+    margin-bottom: 5px; /* Відступ знизу від заголовка */
+    font-size: 22px; /* Розмір шрифту заголовка */
+}
+
+/* Стилі для розташування картинки і тексту в один рядок */
+.promo-item {
+    display: flex; /* Задаємо гнучкий контейнер */
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    margin-bottom: 20px; /* Відступ між промо акціями */
+}
+
+/* Стилі для картинки в промо акції */
+.promo-item img {
+    max-width: 100px; /* Максимальна ширина картинки */
+    margin-right: 10px; /* Відступ зправа від картинки */
+}
+
+/* Стилі для тексту в промо акції */
+.promo-item .promo-details {
+    flex-grow: 1; /* Розширення текстового блоку на всю доступну ширину */
+}
+
+/* Стилі для фільтрації промо акцій за бюджетом, тематикою та тривалістю */
+#promo-list {
+    display: flex; /* Гнучкий контейнер для розміщення елементів в один рядок */
+    flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок, якщо ширина екрану обмежена */
+}
+
+/* Задає стилі для інших фільтрів бюджету */
+.filter-low_budget .low_budget,
+.filter-medium_budget .medium_budget,
+.filter-high_budget .high_budget {
+    display: inline-block; /* Розташовує елементи в один рядок */
+}
+
+/* Задає стилі для інших фільтрів тематики */
+.filter-mobile_apps .mobile_apps,
+.filter-photo_contests .photo_contests,
+.filter-hackathons .hackathons,
+.filter-virtual_reality .virtual_reality {
+    display: inline-block; /* Розташовує елементи в один рядок */
+}
+
+/* Сховати інші класи тематик */
+.filter-mobile_apps .photo_contests,
+.filter-mobile_apps .hackathons,
+.filter-mobile_apps .virtual_reality,
+.filter-photo_contests .mobile_apps,
+.filter-photo_contests .hackathons,
+.filter-photo_contests .virtual_reality,
+.filter-hackathons .mobile_apps,
+.filter-hackathons .photo_contests,
+.filter-hackathons .virtual_reality,
+.filter-virtual_reality .mobile_apps,
+.filter-virtual_reality .photo_contests,
+.filter-virtual_reality .hackathons {
+    display: none; /* Сховати елементи, які не відповідають вибраній тематиці */
+}
+
+/* Стилі для фільтрації за тривалістю промо акцій */
+.filter-7_days .seven_days,
+.filter-more_than_7_days .more_than_7_days {
+    display: inline-block; /* Розташовує елементи в один рядок */
+}
+
+/* Сховати інші класи тривалості */
+.filter-7_days .more_than_7_days,
+.filter-more_than_7_days .seven_days {
+    display: none; /* Сховати елементи, які не відповідають вибраній тривалості */
+}
